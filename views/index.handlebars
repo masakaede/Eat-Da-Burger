@@ -2,23 +2,23 @@
 
 <h2>Wanted!</h2>
 
-<ul>
+<ol>
     {{#each burgers}}
     {{#unless devoured}}
     {{> burger-block devoured=true}}
     {{/unless}}
     {{/each}}
-</ul>
+</ol>
 
 <h2>Devoured!</h2>
 
-<ul>
+<ol>
     {{#each burgers}}
     {{#if devoured}}
     {{> burger-block devoured=false}}
     {{/if}}
     {{/each}}
-</ul>
+</ol>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
