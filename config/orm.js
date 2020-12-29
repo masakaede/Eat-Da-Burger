@@ -1,3 +1,4 @@
+// Import MySQL connection.
 var connection = require("./connection.js");
 
 function printQuestionMarks(num) {
@@ -24,7 +25,7 @@ function objToSql(ob) {
 }
 
 var orm = {
-    SelectAll: function (tableInput, cb) {
+    selectAll: function (tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) {
@@ -68,20 +69,9 @@ var orm = {
 
             cb(result);
         });
-    },
-    delete: function (table, condition, cb) {
-        var queryString = "DELETE FROM " + table;
-        queryString += " WHERE ";
-        queryString += condition;
-
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
-
-            cb(result);
-        });
     }
 };
+
+// Export the orm object for the model (burger.js).
 
 module.exports = orm;
