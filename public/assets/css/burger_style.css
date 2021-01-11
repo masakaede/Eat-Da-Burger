@@ -1,0 +1,58 @@
+body{
+    background: rgb(199, 140, 100);
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Muli', sans-serif
+  }
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box
+  }
+  
+  .col-20{
+    flex-basis: 20%;
+    padding: 10px;
+    border-width: 2px;
+    border-color: rgb(150, 134, 134);
+    border-style: solid;
+    margin: 10px
+  }
+
+  .submit{
+    font-size: .9rem;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    color: azure;
+    background-color:rgb(82, 143, 143);
+    border: none;
+    outline:none;
+    width: 100%;
+    cursor: pointer
+  }
+
+  h2{
+      text-align: center;
+  }
+  
+  li{
+      background-color: azure;
+      margin:20px;
+      text-align: center;
+
+  }
+
+  .devoured-it{
+    display: inline-block;
+    color: azure;
+    background-color:rgb(82, 143, 143);
+
+  }
