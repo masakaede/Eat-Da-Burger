@@ -19,37 +19,6 @@ $(function () {
         );
     });
 
-    $(".burger-edit").on("click", function (event) {
-        const id = $(this).data("id");
-        console.log("edit");
-        window.location.href = `/${id}`;
-    });
-
-    $(".burger-rename").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
-        event.preventDefault();
-
-        const id = $(this).data("id");
-        const updatedBurger = {
-            burger_name: $("#burger_name").val().trim(),
-        };
-
-        if (updatedBurger.burger_name) {
-            // Send the POST request.
-            $.ajax("/api/burgers/namechange/" + id, {
-                type: "PUT",
-                data: updatedBurger
-            }).then(
-                () => {
-                    // Reload the page to get the updated list
-                    location.assign("/");
-                }
-            );
-        } else {
-            alert('Please enter a valid burger name');
-        }
-    });
-
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
